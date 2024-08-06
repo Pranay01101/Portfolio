@@ -1,38 +1,99 @@
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --primary-color: #007bff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* Takes up remaining space */
+  padding-top: 70px; /* Adjust for fixed header */
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.hero, .about, .skills, .experience, .projects, .contact {
+  padding: 50px 20px;
+}
+
+.hero {
+  background-color: var(--background-color);
+  padding: 100px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero p {
+  font-size: 1.5em;
+  color: var(--text-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.about p, .skills ul li, .experience p, .projects .project p, .contact p {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+.projects .project {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.projects .project:hover {
+  transform: translateY(-10px);
+}
+
+.projects .project h3 {
+  font-size: 1.5em;
+}
+
+.projects .project a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #333;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 20px 0;
+  text-align: center;
 }

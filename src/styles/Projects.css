@@ -1,0 +1,155 @@
+.projects {
+    padding: 50px 20px;
+    overflow: hidden; 
+}
+
+.projects h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 0 20px 0; 
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.projects h2:hover {
+    color: #007bff;
+    transform: scale(1.05); 
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    overflow: hidden; 
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card::before {
+    content: '\f04c'; 
+    font-family: 'Font Awesome 5 Free'; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+    font-size: 2em;
+    margin: 0 0 20px 0; 
+}
+
+.modal-content p {
+    font-size: 1.2em;
+}
+
+.modal-content .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.modal-content a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #d32f2f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .projects h2 {
+      font-size: 1.5em;
+    }
+  
+    .project-card {
+      padding: 15px;
+    }
+  }
+
+ 

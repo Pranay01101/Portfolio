@@ -1,0 +1,43 @@
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px 0; 
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    color: #333;
+    animation: fadeInUp 1s ease-in-out 0.5s;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
