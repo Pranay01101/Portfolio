@@ -10,9 +10,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div className="App">
         <Header />
         <main className="main-content">
